@@ -1202,6 +1202,12 @@ var ikData = {
 			"lat": 57.62105655,
 			"desc": "Которосльная набережная, д. 26",
 			"name": "гостиница Юбилейная"
+		},
+		{
+			"lon": 39.8354527,
+			"lat": 57.6257134,
+			"desc": "Привокзальная пл., д. 1а",
+			"name": "вокзал"
 		}
 	]
 	},
@@ -1226,7 +1232,7 @@ var ikData = {
 			"data": ikData.kv
 		},
 		{
-			"type": "Встреча",
+			"type": "Места встреч",
 			"pict": "images/Lava-Lamp32.png",
 			"popupTpl": "<strong>{name}</strong><br/>{desc}",
 			"data": ikData.meeting
