@@ -1,44 +1,47 @@
-var data = {
+(function() {
+	"use strict";
+var ikData = {
 	"tiks": [
 		{
 			"lon": 39.786892,
 			"lat": 57.68565,
 			"desc": "ТИК Дзержинского района, Ленинградский пр-т, 50 (4852) 40-94-50",
-			"url": "http://www.yaroslavl.vybory.izbirkom.ru/tikName/yaroslavl?action=show_komissia&amp;tikName=76&amp;sub_tikName=76&amp;type=100&amp;sortMode=atd&amp;vrnorg=276200070662&amp;vrnkomis=476401800484",
+			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070662&vrnkomis=476401800484",
 			"name": "Дзержинский"
 		},
 		{
 			"lon": 39.934155,
 			"lat": 57.6516,
 			"desc": "ТИК Заволжского района, проспект Авиаторов, 74а(4852) 409789",
-			"url": "http://www.yaroslavl.vybory.izbirkom.ru/tikName/yaroslavl?action=show_komissia&amp;tikName=76&amp;sub_tikName=76&amp;type=100&amp;sortMode=atd&amp;vrnorg=276200070672&amp;vrnkomis=476401891840",
+			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070672&vrnkomis=476401891840",
 			"name": "Заволжский"
 		},
 		{
 			"lon": 39.878857,
 			"lat": 57.62838,
 			"desc": "ТИК Кировского района города, Республиканская, 49(4852) 40-92-03",
-			"url": "http://www.yaroslavl.vybory.izbirkom.ru/tikName/yaroslavl?action=show_komissia&amp;tikName=76&amp;sub_tikName=76&amp;type=100&amp;sortMode=atd&amp;vrnorg=276200070676&amp;vrnkomis=476401987547",
+			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070676&vrnkomis=476401987547",
 			"name": "Кировский"
 		},
 		{
 			"lon": 39.871819,
 			"lat": 57.60918,
 			"desc": "ТИК Красноперекопского района, Большая Федоровская, 43(4852) 40-44-00",
-			"url": "http://www.yaroslavl.vybory.izbirkom.ru/tikName/yaroslavl?action=show_komissia&amp;tikName=76&amp;sub_tikName=76&amp;type=100&amp;sortMode=atd&amp;vrnorg=276200070680&amp;vrnkomis=476402087696",
+			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070680&vrnkomis=476402087696",
 			"name": "Красноперекопский"
 		},
 		{
 			"lon": 39.87521,
 			"lat": 57.642971,
 			"desc": "ТИК Ленинского района, Советская, 80(4852) 40-90-04, 40-90-35",
-			"url": "http://www.yaroslavl.vybory.izbirkom.ru/tikName/yaroslavl?action=show_komissia&amp;tikName=76&amp;sub_tikName=76&amp;type=100&amp;sortMode=atd&amp;vrnorg=276200070684&amp;vrnkomis=476402177368",
+			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070684&vrnkomis=476402177368",
 			"name": "Ленинский"
 		},
 		{
 			"lon": 39.874191,
 			"lat": 57.598118,
-			"desc": "ТИК Фрунзенского района, Московский пр-т, 10740-92-49 40-92-44http://www.yaroslavl.vybory.izbirkom.ru/tikName/yaroslavl?action=show_komissia&amp;tikName=76&amp;sub_tikName=76&amp;type=100&amp;sortMode=atd&amp;vrnorg=276200070688&amp;vrnkomis=476402295481",
+			"desc": "ТИК Фрунзенского района, Московский пр-т, 10740-92-49 40-92-44",
+			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070688&vrnkomis=476402295481",
 			"name": "Фрунзенский"
 		}
 	],
@@ -1192,9 +1195,45 @@ var data = {
 			"desc": "Ярославль, Ярославская область",
 			"name": "Первомайский пер., 2"
 		}
+	],
+	"meeting": [
+		{
+			"lon": 39.8835805,
+			"lat": 57.62105655,
+			"desc": "Которосльная набережная, д. 26",
+			"name": "гостиница Юбилейная"
+		}
 	]
-};
-window.onload = function() {
+	},
+	ikMetadata = [
+		{
+			"type": "УИКи",
+			"pict": "images/Red-chair32.png",
+			"classifier": "tikName",
+			"popupTpl": "<strong>УИК {name}</strong><br/>{desc}",
+			"data": ikData.uiks
+		},
+		{
+			"type": "ТИКи",
+			"pict": "images/Red-Couch32.png",
+			"popupTpl": "<strong>ТИК <a href='{url}'>{name}</a></strong><br/>{desc}",
+			"data": ikData.tiks
+		},
+		{
+			"type": "Жильё",
+			"pict": "images/House32.png",
+			"popupTpl": "<strong>{name}</strong>",
+			"data": ikData.kv
+		},
+		{
+			"type": "Встреча",
+			"pict": "images/Lava-Lamp32.png",
+			"popupTpl": "<strong>{name}</strong><br/>{desc}",
+			"data": ikData.meeting
+		}
+	];
+
+var getMapYarCentered = function() {
 	var map = new L.Map('map');
 	var cloudmade = new L.TileLayer('http://{s}.tile.cloudmade.com/4dbea02acb2d47779913c727fa16dda9/997/256/{z}/{x}/{y}.png',
 		{
@@ -1204,59 +1243,57 @@ window.onload = function() {
 	);
 	var yar = new L.LatLng(57.616666676667, 39.85000001);
 	map.setView(yar, 13).addLayer(cloudmade);
-	var separatedLayers = [],
-		topGroup = new L.LayerGroup,
-		subLayers = {};
+	return map;
+};
+var tpl = function(templ, obj) {
+	return templ.replace(/{([^}]+)}/g, function(a, b) {
+		return obj[b];
+	});
+};
+var createMap = function() {
+	var map = getMapYarCentered(),
+		IkIcon = L.Icon.extend({
+			iconSize: new L.Point(32, 32)
+		}),
+		subLayers = {},
+		groupIcon,
+		lGroup,
+		markerPlace,
+		marker,
+		arr,
+		overlays = {};
 
-	var setMarkers = function(map, arr, dataType) {
-		var IkIcon = L.Icon.extend({
-				iconUrl: 'images/Red-chair32.png',
-				iconSize: new L.Point(32, 32)
-		});
-		var uikIcon = new IkIcon(),
-			tikIcon = new IkIcon('images/Red-Couch32.png'),
-			kvIcon = new IkIcon('images/House32.png');
-		var ic = (dataType=='ТИК' && tikIcon) || (dataType == 'УИК' && uikIcon) || kvIcon,
-			markerLocation,
-			marker,
-			lGroup = new L.LayerGroup(),
-			tikName;
-		for (var i = 0, len = arr.length; i < len; i++) {
-			markerLocation = new L.LatLng(arr[i].lat, arr[i].lon);
-			marker = new L.Marker(markerLocation, {icon: ic});
-			marker.bindPopup('<strong>' + dataType + ' ' + arr[i].name + '</strong><br/>' + arr[i].desc);
-			tikName = arr[i].tikName;
-			if (tikName) {
-				if (!subLayers[tikName]) {
-					subLayers[tikName] = new L.LayerGroup;
-				}
-				subLayers[tikName].addLayer(marker);
-			} else {
+	for (var i = 0, len = ikMetadata.length; i < len; i++) {
+		groupIcon = new IkIcon(ikMetadata[i].pict);
+		lGroup = new L.LayerGroup();
+		arr = ikMetadata[i].data;
+		for (var j = 0, leng = arr.length; j < leng; j++) {
+			markerPlace = new L.LatLng(arr[j].lat, arr[j].lon);
+			marker = new L.Marker(markerPlace, {icon: groupIcon});
+			marker.bindPopup(tpl(ikMetadata[i].popupTpl, arr[j]));
+			if (typeof ikMetadata[i].classifier == 'undefined') {
 				lGroup.addLayer(marker);
+			} else {
+				if (!subLayers[arr[j][ikMetadata[i].classifier]]) {
+					subLayers[arr[j][ikMetadata[i].classifier]] = new L.LayerGroup;
+				}
+				subLayers[arr[j][ikMetadata[i].classifier]].addLayer(marker);
 			}
 		}
-		if (tikName) {
+		if (typeof ikMetadata[i].classifier == 'undefined') {
+			overlays[ikMetadata[i].type] = lGroup;
+		} else {
 			for (var prop in subLayers) {
 				lGroup.addLayer(subLayers[prop]);
+				overlays[ikMetadata[i].type + ' (' + prop + ')'] = subLayers[prop];
 			}
 		}
-		separatedLayers.push(lGroup);
-		topGroup.addLayer(lGroup);
+		map.addLayer(lGroup);
 	}
 
-	map.addLayer(topGroup);
-	setMarkers(map, data.tiks, 'ТИК');
-	setMarkers(map, data.uiks, 'УИК');
-	setMarkers(map, data.kv, '');
-	var overlays = {
-		"жильё": separatedLayers[2],
-		"ТИКи": separatedLayers[0]
-	};
-	for (var prop in subLayers) {
-		overlays["УИКи (" + prop + ")"] = subLayers[prop];
-	}
-
-	layersControl = new L.Control.Layers({}, overlays);
+	var layersControl = new L.Control.Layers({}, overlays);
 
 	map.addControl(layersControl);
 };
+window.onload = createMap;
+})();
