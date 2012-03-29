@@ -3,44 +3,44 @@
 var ikData = {
 	"tiks": [
 		{
-			"lon": 39.786892,
-			"lat": 57.68565,
-			"desc": "ТИК Дзержинского района, Ленинградский пр-т, 50 (4852) 40-94-50",
+			"lon": 39.78681015,
+			"lat": 57.685742225,
+			"desc": "ТИК Дзержинского района, Ленинградский пр-т, 50. (4852) 40-94-50",
 			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070662&vrnkomis=476401800484",
 			"name": "Дзержинский"
 		},
 		{
-			"lon": 39.934155,
-			"lat": 57.6516,
-			"desc": "ТИК Заволжского района, проспект Авиаторов, 74а(4852) 409789",
+			"lon": 39.9343344,
+			"lat": 57.65157545,
+			"desc": "ТИК Заволжского района, проспект Авиаторов, 74а. (4852) 409789",
 			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070672&vrnkomis=476401891840",
 			"name": "Заволжский"
 		},
 		{
-			"lon": 39.878857,
-			"lat": 57.62838,
-			"desc": "ТИК Кировского района города, Республиканская, 49(4852) 40-92-03",
+			"lon": 39.87883145,
+			"lat": 57.62848255,
+			"desc": "ТИК Кировского района города, Республиканская, 49. (4852) 40-92-03",
 			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070676&vrnkomis=476401987547",
 			"name": "Кировский"
 		},
 		{
 			"lon": 39.871819,
 			"lat": 57.60918,
-			"desc": "ТИК Красноперекопского района, Большая Федоровская, 43(4852) 40-44-00",
+			"desc": "ТИК Красноперекопского района, Большая Федоровская, 43. (4852) 40-44-00",
 			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070680&vrnkomis=476402087696",
 			"name": "Красноперекопский"
 		},
 		{
-			"lon": 39.87521,
-			"lat": 57.642971,
-			"desc": "ТИК Ленинского района, Советская, 80(4852) 40-90-04, 40-90-35",
+			"lon": 39.87169835,
+			"lat": 57.60924145,
+			"desc": "ТИК Ленинского района, Советская, 80. (4852) 40-90-04, 40-90-35",
 			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070684&vrnkomis=476402177368",
 			"name": "Ленинский"
 		},
 		{
-			"lon": 39.874191,
-			"lat": 57.598118,
-			"desc": "ТИК Фрунзенского района, Московский пр-т, 10740-92-49 40-92-44",
+			"lon": 39.8737579,
+			"lat": 57.5981695,
+			"desc": "ТИК Фрунзенского района, Московский пр-т, 107. (4852) 40-92-49 40-92-44",
 			"url": "http://www.yaroslavl.vybory.izbirkom.ru/region/yaroslavl?action=show_komissia&region=76&sub_region=76&type=100&sortMode=atd&vrnorg=276200070688&vrnkomis=476402295481",
 			"name": "Фрунзенский"
 		}
@@ -1198,16 +1198,22 @@ var ikData = {
 	],
 	"meeting": [
 		{
+			"lon": 39.8354527,
+			"lat": 57.6257134,
+			"desc": "Привокзальная пл., д. 1а",
+			"name": "вокзал"
+		},
+		{
 			"lon": 39.8835805,
 			"lat": 57.62105655,
 			"desc": "Которосльная набережная, д. 26",
 			"name": "гостиница Юбилейная"
 		},
 		{
-			"lon": 39.8354527,
-			"lat": 57.6257134,
-			"desc": "Привокзальная пл., д. 1а",
-			"name": "вокзал"
+			"lon": 39.85037515,
+			"lat": 57.624439,
+			"desc": "Рыбинская улица, д. 51",
+			"name": "Дом культуры Всероссийского общества слепых"
 		}
 	]
 	},
