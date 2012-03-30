@@ -215,9 +215,9 @@ var ikData = {
 			"tikName": "Дзержинский"
 		},
 		{
-			"lon": 39.763256,
-			"lat": 57.705627,
-			"desc": " ул. Строителей, д. 21 Центр дополнительного образования МОУ средней общеобразовательной школы № 56",
+			"lon": 39.7628184,
+			"lat": 57.7027967,
+			"desc": "пр-д Моторостроителей, д. 10, МОУ средняя общеобразовательная школа № 56 (местонахождение комиссии: ул. Строителей, д. 21, Центр дополнительного образования МОУ средней общеобразовательной школы № 56)",
 			"name": "63, 64, 65, 66, 67, 68",
 			"tikName": "Дзержинский"
 		},
@@ -1384,6 +1384,13 @@ var createMap = function() {
 	var layersControl = new L.Control.Layers({}, overlays);
 
 	map.addControl(layersControl);
+
+	var successGetLoc = function(position) {
+		map.setView(new L.LatLng(position.coords.latitude, position.coords.longitude), 13);
+	};
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(successGetLoc);
+	}
 };
 window.onload = createMap;
 })();
