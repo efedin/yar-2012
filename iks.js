@@ -1416,7 +1416,7 @@ var createMap = function() {
 	map.addControl(layersControl);
 
 	var successGetLoc = function(position) {
-		map.setView(new L.LatLng(position.coords.latitude, position.coords.longitude), 13);
+		map.setView(new L.LatLng(position.coords.latitude, position.coords.longitude), 15);
 	};
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(successGetLoc);
